@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eu te amo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="love-stage" aria-labelledby="love-title">
+        <div class="glow-field" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="hero-copy">
+          <h1 id="love-title">Eu te amo</h1>
+          <p class="date-label">
+            <span class="heart"></span>
+            Feliz Dia dos Namorados
+            <span class="heart"></span>
+          </p>
+        </div>
+      </section>
+
+      <section class="love-message" aria-label="Mensagem especial">
+        <p>
+          Hoje é o dia dos namorados, e mesmo que a a gente ainda não seja um casal de fato, eu não poderia deixar passar a oportunidade de dizer o quanto você é especial para mim.
+          Nos últimos meses, tive o privilégio de conhecer ainda mais a mulher incrível que você é. Sua força, sua coragem, seu sorriso mesmo diante das dificuldades e a forma como você enfrenta cada desafio só aumentaram a admiração e o amor que sinto por você.
+          Quero que você saiba que torço pela sua felicidade, celebro cada uma das suas vitórias e que estar ao seu lado tem sido algo muito especial para mim.
+          Eu te amo, admiro profundamente quem você é e sou grato por ter você na minha vida. ❤️
+        </p>
+      </section>
+      
+        <div class="music-player">
+          <h2>Trilha sonora</h2>
+          <iframe
+            src="https://open.spotify.com/embed/track/2077eHXxwRgxDhEBtJV0wD"
+            width="100%"
+            height="100"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
+        </div>
+
+      <section class="memory-section" aria-label="Fotos com legendas">
+        <div class="carousel-wrap">
+          <div class="carousel-topline">
+            <h2>Nossas memórias</h2>
+          </div>
+
+          <div class="carousel" aria-live="polite">
+            <div class="slides" id="slides"></div>
+          </div>
+
+          <div class="carousel-actions">
+            <button class="icon-button" id="prevSlide" type="button" aria-label="Foto anterior">
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button class="icon-button" id="nextSlide" type="button" aria-label="Próxima foto">
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+
+          <div class="dots" id="dots" aria-label="Selecionar foto"></div>
+        </div>
+
+        <form class="photo-form" id="photoForm">
+          <label class="upload-box" for="photoInput">
+            <input id="photoInput" name="photo" type="file" accept="image/*" required />
+            <span class="upload-icon" aria-hidden="true">+</span>
+            <span>Adicione suas fotos favoritas aqui.</span>
+          </label>
+
+          <label class="caption-field">
+            <span>Legenda</span>
+            <input
+              id="captionInput"
+              name="caption"
+              type="text"
+              maxlength="90"
+              placeholder="Escreva uma lembrança"
+            />
+          </label>
+
+        </form>
+
+      </section>
+    </main>
+
+    <div class="save-modal" id="saveModal" role="dialog" aria-modal="true" aria-labelledby="saveModalTitle" hidden>
+      <div class="save-modal__card">
+        <h3 id="saveModalTitle">Salvar esta foto?</h3>
+        <p>A imagem selecionada será adicionada às "Nossas memórias".</p>
+        <div class="save-modal__actions">
+          <button class="secondary-button" id="cancelSavePhoto" type="button">Cancelar</button>
+          <button class="primary-button" id="confirmSavePhoto" type="button">Salvar foto</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
